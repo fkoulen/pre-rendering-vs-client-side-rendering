@@ -12,7 +12,5 @@ export default function ClientSideRendering() {
             })
     }, [])
 
-    if (!data) return
-
     return DataViewer({data})
 }
