@@ -1,4 +1,5 @@
 import {useEffect, useState} from "react";
+import DataViewer from "@/pages/components/data-viewer";
 
 export default function ClientSideRendering() {
     const [data, setData] = useState(null)
@@ -13,9 +14,5 @@ export default function ClientSideRendering() {
 
     if (!data) return
 
-    return (
-        <div>
-            <h1>{data.count}</h1>
-        </div>
-    )
+    return DataViewer({data})
 }

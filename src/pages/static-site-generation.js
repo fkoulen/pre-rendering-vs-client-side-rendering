@@ -1,3 +1,5 @@
+import DataViewer from "@/pages/components/data-viewer";
+
 export async function getStaticProps() {
     // Fetch data from external API
     const res = await fetch(`https://api.publicapis.org/entries`)
@@ -8,9 +10,5 @@ export async function getStaticProps() {
 }
 
 export default function StaticSiteGeneration({data}) {
-    return (
-        <div>
-            <h1>{data.count}</h1>
-        </div>
-    )
+    return DataViewer({data})
 }
